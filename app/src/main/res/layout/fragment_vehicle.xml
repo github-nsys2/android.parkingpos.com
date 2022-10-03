@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vehiclelistCL"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.Activity.MainActivity">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/VehicleRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/keyfobsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_vehicle"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <RelativeLayout
+                android:background="@drawable/drawable_background_rectangular"
+                android:id="@+id/vehiclespinnerRL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/keyfobsTV"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/VehicleET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overlapAnchor="false" />
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:id="@+id/ll_email"
+                app:layout_constraintTop_toBottomOf="@id/vehiclespinnerRL"
+                android:layout_weight="0.2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:text="@string/enter_amount"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+
+                        android:id="@+id/amountET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/_18sdp"
+                        android:textCursorDrawable="@null"
+                        android:textColor="@color/black"
+                        android:gravity="top"
+                        android:focusableInTouchMode="true"
+                        android:maxLines="1"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="@color/Gray"/>
+
+                    <View
+                        android:background="@color/orange"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/llErroramount"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvErroramount"
+                            android:text="@string/error_empty_amount"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/takePictureTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/take_picture"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll_email"
+                app:layout_constraintBottom_toTopOf="@+id/submitBT"
+                />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/takePictureTV"
+                app:layout_constraintTop_toBottomOf="@id/ll_email"
+                android:id="@+id/takePictureBT"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/dummy_profile" />
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/uploadDPIB"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/takePictureBT"
+                app:layout_constraintBottom_toBottomOf="@id/takePictureBT"
+                android:src="@drawable/ic_camera"/>
+
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:layout_marginStart="@dimen/_25sdp"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/takePictureTV"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/ll_email"-->
+<!--                android:id="@+id/takePictureBT"-->
+<!--                android:padding="@dimen/_10sdp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/backgrond_shape"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/take_picture"-->
+<!--                android:textSize="@dimen/_15sdp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textStyle="bold" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/submitBT"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/backgrond_shape"
+                android:gravity="center"
+                android:text="@string/process_payment"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/uploadDPIB" />
+
+
+
+
+            <!--            <androidx.appcompat.widget.AppCompatTextView-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                android:id="@+id/ValidtransactionTV"-->
+            <!--                android:padding="@dimen/_10sdp"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:background="@drawable/backgrond_shape"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="@string/valid_transaction"-->
+            <!--                android:textSize="@dimen/_15sdp"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textStyle="bold"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/toolbar" />-->
+
+            <!--            <androidx.appcompat.widget.AppCompatTextView-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                android:id="@+id/InvalidLocationTV"-->
+            <!--                android:padding="@dimen/_10sdp"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:background="@drawable/backgrond_shape"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="@string/invalid_location"-->
+            <!--                android:textSize="@dimen/_15sdp"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textStyle="bold"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/ValidtransactionTV" />-->
+
+
+            <!--            <androidx.appcompat.widget.AppCompatTextView-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                android:id="@+id/InvalidposdeviceTV"-->
+            <!--                android:padding="@dimen/_10sdp"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:background="@drawable/backgrond_shape"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="@string/invalid_posdevice"-->
+            <!--                android:textSize="@dimen/_15sdp"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textStyle="bold"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/InvalidLocationTV" />-->
+
+            <!--            <androidx.appcompat.widget.AppCompatTextView-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                android:id="@+id/InvalidcardTV"-->
+            <!--                android:padding="@dimen/_10sdp"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:background="@drawable/backgrond_shape"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="@string/invalid_card"-->
+            <!--                android:textSize="@dimen/_15sdp"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textStyle="bold"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/InvalidposdeviceTV" />-->
+
+            <!--            <androidx.appcompat.widget.AppCompatTextView-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                android:id="@+id/createProfile"-->
+            <!--                android:padding="@dimen/_10sdp"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:background="@drawable/backgrond_shape"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="@string/create_profile"-->
+            <!--                android:textSize="@dimen/_15sdp"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textStyle="bold"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/InvalidcardTV" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

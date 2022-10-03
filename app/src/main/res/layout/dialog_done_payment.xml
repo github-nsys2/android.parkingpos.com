@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+    <layout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingBottom="@dimen/_20sdp" android:background="@color/orange"
+        android:layout_height="wrap_content" android:layout_width="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:background="@drawable/ic_check_circle"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_width="@dimen/_50sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:id="@+id/doneIV"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:id="@+id/titleTV"
+        app:layout_constraintTop_toBottomOf="@id/doneIV"
+        android:textStyle="bold"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:text="Payment Done"
+        android:layout_margin="@dimen/_10sdp"
+        android:gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/okTV"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:text="Ok"
+        android:layout_marginRight="@dimen/_40sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.Activity.MainActivity">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/ValidtransactionTV"
+            android:padding="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+            android:text="@string/validating"
+            android:textColor="@color/orange"
+            android:textStyle="bold" />
+
+
+
+
+
+        <!--            <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                app:layout_constraintStart_toStartOf="parent"-->
+        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                android:id="@+id/ValidtransactionTV"-->
+        <!--                android:padding="@dimen/_10sdp"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="30dp"-->
+        <!--                android:background="@drawable/backgrond_shape"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="@string/valid_transaction"-->
+        <!--                android:textSize="@dimen/_15sdp"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textStyle="bold"-->
+        <!--                app:layout_constraintTop_toBottomOf="@id/toolbar" />-->
+
+        <!--            <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                app:layout_constraintStart_toStartOf="parent"-->
+        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                android:id="@+id/InvalidLocationTV"-->
+        <!--                android:padding="@dimen/_10sdp"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="30dp"-->
+        <!--                android:background="@drawable/backgrond_shape"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="@string/invalid_location"-->
+        <!--                android:textSize="@dimen/_15sdp"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textStyle="bold"-->
+        <!--                app:layout_constraintTop_toBottomOf="@id/ValidtransactionTV" />-->
+
+
+        <!--            <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                app:layout_constraintStart_toStartOf="parent"-->
+        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                android:id="@+id/InvalidposdeviceTV"-->
+        <!--                android:padding="@dimen/_10sdp"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="30dp"-->
+        <!--                android:background="@drawable/backgrond_shape"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="@string/invalid_posdevice"-->
+        <!--                android:textSize="@dimen/_15sdp"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textStyle="bold"-->
+        <!--                app:layout_constraintTop_toBottomOf="@id/InvalidLocationTV" />-->
+
+        <!--            <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                app:layout_constraintStart_toStartOf="parent"-->
+        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                android:id="@+id/InvalidcardTV"-->
+        <!--                android:padding="@dimen/_10sdp"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="30dp"-->
+        <!--                android:background="@drawable/backgrond_shape"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="@string/invalid_card"-->
+        <!--                android:textSize="@dimen/_15sdp"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textStyle="bold"-->
+        <!--                app:layout_constraintTop_toBottomOf="@id/InvalidposdeviceTV" />-->
+
+        <!--            <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                app:layout_constraintStart_toStartOf="parent"-->
+        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                android:id="@+id/createProfile"-->
+        <!--                android:padding="@dimen/_10sdp"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="30dp"-->
+        <!--                android:background="@drawable/backgrond_shape"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="@string/create_profile"-->
+        <!--                android:textSize="@dimen/_15sdp"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textStyle="bold"-->
+        <!--                app:layout_constraintTop_toBottomOf="@id/InvalidcardTV" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

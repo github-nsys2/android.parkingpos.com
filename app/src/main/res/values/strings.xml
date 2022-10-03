@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">PosApplication</string>
+    <string name="amount">Amount</string>
+    <string name="enter_amount">Enter Amount</string>
+
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_location">Enter Location</string>
+    <string name="submit">Submit</string>
+    <string name="process_payment">Process Payment</string>
+    <string name="scan">Scan</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="currency_symbol">AED</string>
+    <string name="error_empty_email">Please enter email</string>
+    <string name="error_empty_amount">Please enter Amount</string>
+
+    <string name="size_text">text size</string>
+    <string name="type_text">text typeface</string>
+    <string name="bold_text">bold</string>
+    <string name="sunmi_font">Sunmi monospace</string>
+    <string name="custom_font">Custom typeface</string>
+    <string name="characterset">char set</string>
+    <string name="underline_text">underline</string>
+
+    <string name="text_print">Hello Dupe \n
+the following transaction has been processed on your card \n
+
+Invoice Amount:    100 \n
+Cashback(10%):       10 \n
+Ref:              ERPTEAM\n \n \n </string>
+    <string name="print">Print</string>
+
+    <string name="toast_3">Bluetooth device is unavailable</string>
+    <string name="toast_4">Bluetooth device not detected. Please open Bluetooth!</string>
+    <string name="toast_5">Not Found InnterPrinter!</string>
+    <string name="toast_6">Bluetooth connect failed!</string>
+    <string name="confirm">Confirm</string>
+
+
+    <string name="valid_transaction">Valid Transaction</string>
+    <string name="start_payment">Start Payment</string>
+    <string name="validation_screen">Validation Screen</string>
+    <string name="invalid_location">Invalid Location</string>
+    <string name="invalid_posdevice">Invalid Pos device</string>
+    <string name="invalid_card">Invalid Card</string>
+    <string name="tap_card_on_machine">Please Tap Card on Machine</string>
+    <string name="tapcardscreen">Tap Card Screen</string>
+    <string name="select_vehicle">Select Vehicle</string>
+    <string name="enter_detail">Enter Details</string>
+    <string name="create_profile">Create Profile</string>
+    <string name="card_no">Card No</string>
+    <string name="validating">Please wait Validating your machine</string>
+    <string name="validatinglocation">Please wait getting your Location</string>
+    <string name="vehicle_number">HP 20D 2035</string>
+    <string name="NoRecordFound">No Record Found.</string>
+    <string name="no_internet">No Internet</string>
+    <string name="contact_support">Invalid card, Please contact support team.</string>
+    <string name="take_picture">Capture Image</string>
+</resources>
